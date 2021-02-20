@@ -1,0 +1,59 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<div class="mainContainer">
+  <div class="navBar">
+    <div class="logo">
+      <img width="80" alt="MTN Logo"
+        src="\assets\images\mtn-group-management-services-logo-74A8373CB9-seeklogo.com.png" />
+    </div>
+    <div class="navLink">
+      <a style="font-weight:bold">Store</a>
+      <a style="font-weight:bold">Products & Services</a>
+      <a style="font-weight:bold">Help & Support</a>
+    </div>
+    <div class="search">
+      <div class="searchIcon">
+        <img src="\assets\images\favpng_search-box-button.png" width="20" height="20">
+        <span style="margin-left: 15px;"><strong>Personal</strong></span>
+        <img style="margin-left: 15px;" src="\assets\images\imgbin_computer-icons-drop-down-list-arrow-png.png" width="20"
+          height="15">
+
+      </div>
+    </div>
+  </div>
+  <div class="contentStyle">
+    <div class="imagestyle" >
+      <div class="subContent">
+        <div class="contentQuestion">
+          <p id="word">What are you <br><strong>here to do?</strong></p>
+        </div>
+        <div class="cellContainer">
+          <div class="cellSubContainer">
+            <owl-carousel-o  [options]="customOptions" (dragging)="startDragging($event)">
+              <ng-container  *ngFor="let slide of cards">
+                <ng-template carouselSlide [id]="slide.id">
+                  <div class="cell">
+                    <img [src]="slide.img" [alt]="slide.description" [title]="slide.title">
+                    <h5>{{slide.title}}</h5>
+                    <button style="font-weight:bold" >{{slide.buttonText}}</button>
+                  </div>
+                </ng-template>
+              </ng-container>
+            </owl-carousel-o>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
